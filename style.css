@@ -1,8 +1,10 @@
 body{
-    background-color: yellow;
+    background-color: gray;
 }
 
 .content {
     max-width: 500px;
     margin: auto;
+    background: white;
+    padding: 10px;
 }
