@@ -1,30 +1,133 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TEST PAGINA</title>
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        min-height: 100dvh;
-        display: grid;
-        place-items: center;
-        background: #fff;
-        color: #111;
-        font-family: Arial, sans-serif;
-      }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f4fa" media="(prefers-color-scheme: light)">
+<meta name="fediverse:creator" content="@WouterVisscher@mastodon.social">
+<meta name="description" content="DJRetard — volg mij op al mijn platforms. Twitch, Kick, Discord, YouTube, Spotify en meer.">
+<meta property="og:title" content="DJRetard — djretard.nl">
+<meta property="og:description" content="Volg mij op al mijn platforms.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://djretard.nl">
+<title>DJRetard — djretard.nl</title>
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/d5adbd400d.js" crossorigin="anonymous"></script>
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      var theme = saved || (prefersLight ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
 
-      h1 {
-        margin: 0;
-        padding: 1rem;
-        font-size: clamp(2rem, 8vw, 5rem);
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>TEST PAGINA</h1>
-  </body>
+<div class="bg" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="grain"></div>
+</div>
+
+<button id="themeToggle" class="theme-toggle" aria-label="Wissel thema" title="Wissel thema">
+  <i class="fa-solid fa-sun sun"></i>
+  <i class="fa-solid fa-moon moon"></i>
+</button>
+
+<main class="card">
+  <img class="avatar-img" src="logo.png" alt="DJRetard logo" width="88" height="88">
+
+  <h1 class="title">DJRETARD</h1>
+  <p class="tagline">Volg mij op al mijn platforms</p>
+
+  <nav class="links" aria-label="Belangrijkste platforms">
+    <a class="link-btn" href="https://www.twitch.tv/DJReethard" target="_blank" rel="noopener" data-brand="twitch">
+      <span class="link-icon"><i class="fa-brands fa-twitch"></i></span>
+      <span class="link-label">Twitch</span>
+      <span class="link-sub">Live streams</span>
+      <i class="fa-solid fa-arrow-up-right-from-square link-arrow"></i>
+    </a>
+    <a class="link-btn" href="https://kick.com/djretard" target="_blank" rel="noopener" data-brand="kick">
+      <span class="link-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+          <rect x="3" y="3" width="4.5" height="18" rx="1"/>
+          <polygon points="7.5,12 14.5,3 21,3 14,12 21,21 14.5,21"/>
+        </svg>
+      </span>
+      <span class="link-label">Kick</span>
+      <span class="link-sub">Live streams</span>
+      <i class="fa-solid fa-arrow-up-right-from-square link-arrow"></i>
+    </a>
+    <a class="link-btn" href="https://discord.gg/29gummeYHG" target="_blank" rel="noopener" data-brand="discord">
+      <span class="link-icon"><i class="fa-brands fa-discord"></i></span>
+      <span class="link-label">Discord</span>
+      <span class="link-sub">Join de community</span>
+      <i class="fa-solid fa-arrow-up-right-from-square link-arrow"></i>
+    </a>
+    <a class="link-btn" href="https://www.youtube.com/channel/UCQKQMzqm30CxbJUHU1blQdg" target="_blank" rel="noopener" data-brand="youtube">
+      <span class="link-icon"><i class="fa-brands fa-youtube"></i></span>
+      <span class="link-label">YouTube</span>
+      <span class="link-sub">Video's &amp; clips</span>
+      <i class="fa-solid fa-arrow-up-right-from-square link-arrow"></i>
+    </a>
+  </nav>
+
+  <p class="divider"><span>Meer platforms</span></p>
+
+  <nav class="socials" aria-label="Overige social media">
+    <a href="https://x.com/WouterVisscher" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" data-brand="twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/woutervisscher" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" data-brand="instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" data-brand="facebook">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a rel="me noopener" href="https://mastodon.social/@WouterVisscher" target="_blank" aria-label="Mastodon" title="Mastodon" data-brand="mastodon">
+      <i class="fa-brands fa-mastodon"></i>
+    </a>
+    <a href="https://open.spotify.com/user/112297846?si=40ac1fd8c1d34c74" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify" data-brand="spotify">
+      <i class="fa-brands fa-spotify"></i>
+    </a>
+    <a href="https://www.mixcloud.com/DJRetard/" target="_blank" rel="noopener" aria-label="Mixcloud" title="Mixcloud" data-brand="mixcloud">
+      <i class="fa-brands fa-mixcloud"></i>
+    </a>
+    <a href="https://soundcloud.com/djreethard" target="_blank" rel="noopener" aria-label="SoundCloud" title="SoundCloud" data-brand="soundcloud">
+      <i class="fa-brands fa-soundcloud"></i>
+    </a>
+  </nav>
+
+  <footer class="foot">
+    <span>djretard.nl &middot; <span id="year">2026</span></span>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        var next = cur === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    }
+
+    var year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+  })();
+</script>
+
+</body>
 </html>
