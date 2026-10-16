@@ -335,6 +335,11 @@ body {
   opacity: 0.75;
 }
 
+.foot a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
 /* Theme toggle */
 .theme-toggle {
   position: fixed;
